@@ -1,7 +1,7 @@
 package com.curso.cursomc.services;
 
 import com.curso.cursomc.domain.Categoria;
-import com.curso.cursomc.repositories.CategoriaRepositorie;
+import com.curso.cursomc.repositories.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.Optional;
 public class CategoriaService {
 
     @Autowired
-    private CategoriaRepositorie repo;
+    private CategoriaRepository repo;
 
     public Categoria find(Integer id) {
         Optional<Categoria> obj = repo.findById(id);
